@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include <cstring>
+#include <cstring> // memset.
 
 using namespace std;
 #define TAM 5
@@ -23,7 +23,7 @@ int main()
 
 	//Parte 3: Utilizando memset (Avisar que o valor a ser preenchido é do tipo char)
 	char vetor4[5];
-	memset(vetor4, '$', sizeof(vetor4));
+	memset(vetor4, '$', sizeof(vetor4));// 
 
 	 cout << "Elemento" << setw(13) << "Valor" << endl;
 
@@ -33,7 +33,7 @@ int main()
 	}
 
 	// Parte 4: Vetores multidimensionais 
-	int vetor5[3][2] = { {1,2}, {3,4}, {5,6} };
+	int vetor5[3][2] = { {1,2}, {3,4}, {5,6} }; // cada linha é separada por chaves.
 
     for (int i = 0; i < 3;i++)
 	{

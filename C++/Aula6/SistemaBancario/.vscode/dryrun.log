@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory `c:/Users/Lucca/Documents/GitHub/InformaticaIndustrialUFJF/C++/Aula6/SistemaBancario'
+g++ -std=c++17 -ggdb -Iinc src/banco.cpp src/conta.cpp src/main.cpp -o bin/SistemaBancario 
+ 
+make.exe: Leaving directory `c:/Users/Lucca/Documents/GitHub/InformaticaIndustrialUFJF/C++/Aula6/SistemaBancario'
+ 

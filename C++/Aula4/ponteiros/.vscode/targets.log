@@ -1,0 +1,380 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-pc-mingw32
+ 
+
+# Make data base, printed on Wed May 25 11:03:26 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `makefile', line 5)
+SRC := src
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile
+CURDIR := c:/Users/Lucca/Documents/GitHub/Informati 
+caIndustrialUFJF/C++/Aula4/ponteiros
+# default
+SHELL := sh.exe
+# makefile (from `makefile', line 4)
+BIN := bin
+# environment
+WINDIR = C:\WINDOWS
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVE = C:\Users\Lucca\OneDrive
+# environment
+QSYS_ROOTDIR = F:\intelFPGA_lite\20.1\quartus\sopc_builder\bin
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+# makefile (from `makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+TMP = C:\Users\Lucca\AppData\Local\Temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ee8f6b10-8299-4c36-8ce3-50c23ae12851-sock
+# environment
+VSCODE_CWD = C:\Users\Lucca\AppData\Local\Programs\Microsoft VS Code
+# environment
+PATH = C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\FlexBison\GnuWin32\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;F:\Program_Files\MATLAB_R2018a\runtime\win64;F:\Program_Files\MATLAB_R2018a\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\MinGW\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\MinGW\bin;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;F:\Program_Files\Git\cmd;C:\Users\Lucca\anaconda3\Lib;C:\Users\Lucca\anaconda3;C:\Users\Lucca\anaconda3\Library;C:\Users\Lucca\anaconda3\Scripts;C:\Users\Lucca\anaconda3\Library\bin;C:\Users\Lucca\anaconda3\Library\mingw-w64\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\GnuWin32\bin;C:\MinGW\bin;C:\Users\Lucca\AppData\Local\Microsoft\WindowsApps;C:\Users\Lucca\AppData\Local\atom\bin;F:\Program_Files\MiKTex\miktex\bin\x64\;C:\Users\Lucca\AppData\Local\GitHubDesktop\bin;C:\FlexBison\GnuWin32\bin;C:\Users\Lucca\AppData\Local\gitkraken\bin;C:\Users\Lucca\AppData\Local\Microsoft\WindowsApps;C:\Users\Lucca\anaconda3;C:\Users\Lucca\anaconda3\Lib;C:\Users\Lucca\anaconda3\Library\mingw-w64\bin;C:\Users\Lucca\anaconda3\Scripts;C:\Users\Lucca\anaconda3\Library;F:\intelFPGA_lite\20.1\modelsim_ase\win32aloem;C:\Users\Lucca\AppData\Roaming\npm;C:\Program Files (x86)\GnuWin32\bin;;C:\Users\Lucca\AppData\Local\Programs\Microsoft VS Code\bin
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132870960597175493
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+USERPROFILE = C:\Users\Lucca
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SOPC_KIT_NIOS2 = F:\intelFPGA_lite\20.1\nios2eds
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives
+# automatic
+%F = $(notdir $%)
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16516_IMJXABTBXMAIGWEJ
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = LUCCA-DELL-INSP
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ASL.LOG = Destination=file
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = Lucca
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\Lucca\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# environment
+LOGONSERVER = \\LUCCA-DELL-INSP
+# environment
+ONEDRIVECONSUMER = C:\Users\Lucca\OneDrive
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = LUCCA-DELL-INSP
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from `makefile', line 2)
+CXX_FLAGS := -std=c++17 -ggdb
+# default
+MAKE_VERSION := 3.81
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `makefile', line 6)
+INCLUDE := inc
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LOCALAPPDATA = C:\Users\Lucca\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\
+# default
+MAKE_COMMAND := make.exe
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\2550b96ec271dce6794956e2ee6135ea-1.67.2-main-sock
+# environment
+HOMEPATH = \Users\Lucca
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+SYSTEMROOT = C:\WINDOWS
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\Lucca\AppData\Roaming
+# environment
+TEMP = C:\Users\Lucca\AppData\Local\Temp
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# default
+MAKEFILES := 
+# environment
+QUARTUS_ROOTDIR = F:\intelFPGA_lite\20.1\quartus
+# automatic
+<F = $(notdir $<)
+# makefile (from `makefile', line 9)
+EXECUTABLE := Programa
+# makefile (from `makefile', line 1)
+CXX := g++
+# environment
+LC_ALL = C
+# makefile (from `makefile', line 8)
+LIBRARIES := 
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = 9e09
+# environment
+MOZ_PLUGIN_PATH = C:\PROGRAM FILES (X86)\FOXIT SOFTWARE\FOXIT READER\plugins\
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+VSCODE_PID = 16516
+# environment
+USERDOMAIN_ROAMINGPROFILE = LUCCA-DELL-INSP
+# variable set hash-table stats:
+# Load=101/1024=10%, Rehash=0, Collisions=11/132=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# : could not be stat'd.
+# C:\FlexBison\GnuWin32\bin (key C:/FlexBison/GnuWin32/bin, mtime 1607444477): 11 files, no impossibilities.
+# C:\Users\Lucca\anaconda3\Lib (key C:/Users/Lucca/anaconda3/Lib, mtime 1617904593): 211 files, no impossibilities.
+# C:\Program Files\Common Files\Oracle\Java\javapath (key C:/Program Files/Common Files/Oracle/Java/javapath, mtime 1638888535): 6 files, no impossibilities.
+# C:\Users\Lucca\anaconda3\Library (key C:/Users/Lucca/anaconda3/Library, mtime 1617822813): 21 files, no impossibilities.
+# C:\Users\Lucca\anaconda3 (key C:/Users/Lucca/anaconda3, mtime 1652393091): 87 files, no impossibilities.
+# F:\Program_Files\MiKTex\miktex\bin\x64\ (key F:/Program_Files/MiKTex/miktex/bin/x64/, mtime 1606060287): 668 files, no impossibilities.
+# C:\Users\Lucca\AppData\Roaming\npm (key C:/Users/Lucca/AppData/Roaming/npm, mtime 1642622409): 2 files, no impossibilities.
+# F:\Program_Files\Git\cmd (key F:/Program_Files/Git/cmd, mtime 1617635118): 8 files, no impossibilities.
+# C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1616967020): 31 files, no impossibilities.
+# C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1652495933): 171 files, no impossibilities.
+# . (key c:/Users/Lucca/Documents/GitHub/InformaticaIndustrialUFJF/C++/Aula4/ponteiros, mtime 1653439463): 6 files, no impossibilities.
+# C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\ (key C:/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/, mtime 1616595293): 73 files, no impossibilities.
+# C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ (key C:/Program Files (x86)/Microsoft SQL Server/120/Tools/Binn/, mtime 1616595206): 12 files, no impossibilities.
+# C:\Program Files\Microsoft SQL Server\120\DTS\Binn\ (key C:/Program Files/Microsoft SQL Server/120/DTS/Binn/, mtime 1616595219): 38 files, no impossibilities.
+# C:\ProgramData\chocolatey\bin (key C:/ProgramData/chocolatey/bin, mtime 1642622459): 13 files, no impossibilities.
+# C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1642622414): 13 files, no impossibilities.
+# C:\Python310\ (key C:/Python310/, mtime 1642622585): 18 files, no impossibilities.
+# F:\Program_Files\MATLAB_R2018a\runtime\win64 (key F:/Program_Files/MATLAB_R2018a/runtime/win64, mtime 1609781187): 10 files, no impossibilities.
+# C:\Python310\Scripts\ (key C:/Python310/Scripts/, mtime 1642622585): 5 files, no impossibilities.
+# C:\MinGW\bin (key C:/MinGW/bin, mtime 1650560765): 59 files, no impossibilities.
+# C:\Users\Lucca\AppData\Local\GitHubDesktop\bin (key C:/Users/Lucca/AppData/Local/GitHubDesktop/bin, mtime 1606835075): 4 files, no impossibilities.
+# C:\Users\Lucca\AppData\Local\Microsoft\WindowsApps (key C:/Users/Lucca/AppData/Local/Microsoft/WindowsApps, mtime 1653444416): 30 files, no impossibilities.
+# C:\Users\Lucca\anaconda3\Library\bin (key C:/Users/Lucca/anaconda3/Library/bin, mtime 1617822849): 389 files, no impossibilities.
+# C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\ (key C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/110/Tools/Binn/, mtime 1616595219): 6 files, no impossibilities.
+# C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
+# C:\Users\Lucca\anaconda3\Scripts (key C:/Users/Lucca/anaconda3/Scripts, mtime 1647881393): 320 files, no impossibilities.
+# F:\intelFPGA_lite\20.1\modelsim_ase\win32aloem (key F:/intelFPGA_lite/20.1/modelsim_ase/win32aloem, mtime 1635174744): 110 files, no impossibilities.
+# C:\Program Files\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files/Intel/Intel(R) Management Engine Components/DAL, mtime 1614776258): 4 files, no impossibilities.
+# C:\WINDOWS (key C:/WINDOWS, mtime 1652495931): 122 files, no impossibilities.
+# C:\Users\Lucca\anaconda3\Library\mingw-w64\bin (key C:/Users/Lucca/anaconda3/Library/mingw-w64/bin, mtime 1617822810): 15 files, no impossibilities.
+# C:\Users\Lucca\AppData\Local\gitkraken\bin (key C:/Users/Lucca/AppData/Local/gitkraken/bin, mtime 1612220867): 3 files, no impossibilities.
+# src (key c:/Users/Lucca/Documents/GitHub/InformaticaIndustrialUFJF/C++/Aula4/ponteiros/src, mtime 1653439463): 3 files, no impossibilities.
+# C:\Program Files\Microsoft SQL Server\120\Tools\Binn\ (key C:/Program Files/Microsoft SQL Server/120/Tools/Binn/, mtime 1616595206): 14 files, no impossibilities.
+# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1653483772): 3112 files, no impossibilities.
+# C:\Users\Lucca\AppData\Local\atom\bin (key C:/Users/Lucca/AppData/Local/atom/bin, mtime 1605721055): 6 files, no impossibilities.
+# C:\Users\Lucca\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/Lucca/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1653443824): 4 files, no impossibilities.
+# F:\Program_Files\MATLAB_R2018a\bin (key F:/Program_Files/MATLAB_R2018a/bin, mtime 1609799632): 22 files, no impossibilities.
+# C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR (key C:/Program Files/NVIDIA Corporation/NVIDIA NvDLISR, mtime 1609025993): 5 files, no impossibilities.
+# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1614776258): 7 files, no impossibilities.
+# C:\Program Files (x86)\GnuWin32\bin (key C:/Program Files (x86)/GnuWin32/bin, mtime 1653427480): 5 files, no impossibilities.
+
+# 5644 files, no impossibilities in 41 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+all: bin/Programa
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/Programa: src/main.cpp
+#  Implicit rule search has not been done.
+#  Implicit/static 
+ pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := bin/Programa
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := src/main.cpp
+# automatic
+# | := 
+# automatic
+# < := src/main.cpp
+# automatic
+# ^ := src/main.cpp
+# automatic
+# ? := src/main.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/16=13%
+#  commands to execute (from `makefile', line 19):
+	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) $^ -o $@ $(LIBRARIES)
+	 
+
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-24 21:44:23
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+run: clean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to exe 
+cute (from `makefile', line 15):
+	clear
+	./$(BIN)/$(EXECUTABLE)
+	
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 22):
+	-rm $(BIN)/*
+	
+
+# Not a target:
+src/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-24 21:44:23
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# files hash-table stats:
+ 
+# Load=8/1024=1%, Rehash=0, Collisions=0/25=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Wed May 25 11:03:26 2022
+
+ 

@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 
-    Conta contas[4]={{1234,01,"Jose","Corrente",300},{4567,02,"Joao","Poupanca",800},{7890,03,"Maria","Corrente",1000}, {8956,04,"Madalena","Poupanca",2000}};
+    Conta contas[4]={{1234,1,"Jose","Corrente",300},{4567,2,"Joao","Poupanca",800},{7890,3,"Maria","Corrente",1000}, {8956,4,"Madalena","Poupanca",2000}};
 
     Conta cc[2] = {contas[0],contas[2]};
     Conta cp[2] = {contas[1],contas[3]};

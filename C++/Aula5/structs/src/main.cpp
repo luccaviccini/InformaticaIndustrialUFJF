@@ -7,6 +7,9 @@ using namespace std;
 
 int main()
 {
+
+    
+
     //Declaração
     Pessoa joao = {"Joao", 20, 1.82, 80.5}, jose = {"Jose", 25, 1.75,70.3}, maria = {"Maria", 18, 1.68,63.5};
 
@@ -17,6 +20,7 @@ int main()
     Pessoa* pjoao = & joao;
 
     cout << pjoao->nome<<endl;
+    cout << pjoao->altura <<endl;
 
     //Passagem de estrutras para funções
     imprimeDados(joao);

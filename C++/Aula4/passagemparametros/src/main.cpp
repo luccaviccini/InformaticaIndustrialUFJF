@@ -18,7 +18,7 @@ int main()
 	cout << "Valor de var: " << var << endl;//Imprime 11
 
 	//Passagem por referência
-	cout << "Valor de var: " << var << endl;//Imprime 10
-	passagemReferencia(var);//Altera a variavel
 	cout << "Valor de var: " << var << endl;//Imprime 11
+	passagemReferencia(var);//Altera a variavel
+	cout << "Valor de var: " << var << endl;//Imprime 12
 }

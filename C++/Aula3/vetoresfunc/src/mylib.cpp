@@ -1,6 +1,6 @@
 #include "mylib.h"
 
-void elevaQuadradoVetor(int vet[], int tamVet)
+void elevaQuadradoVetor(int vet[], int tamVet) // função void... nào retorna nada.
 {
 	for (int i = 0; i < tamVet ;i++) //Multiplica cada espaço do vetor por ele mesmo
 	{

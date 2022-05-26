@@ -11,7 +11,10 @@ private: //Atributos privados só podem ser acessados pela classe e seus metodos
 public://Podem ser acessados direto no main
 	int numero;//Atributo publico
 	std::string titular;
-	void exibeDados();//Metodo publico
+	void   exibeDados();//Metodo publico
+	double getSaldo(int senha); 
+	void   setSaldo(double valor);
+	void   setSenha(int nova_senha);
 
 };
 

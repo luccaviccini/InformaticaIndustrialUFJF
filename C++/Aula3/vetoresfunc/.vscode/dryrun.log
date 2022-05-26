@@ -1,0 +1,5 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory `c:/Users/Lucca/Documents/GitHub/InformaticaIndustrialUFJF/C++/Aula3/vetoresfunc'
+g++ -std=c++17 -ggdb -Iinc src/main.cpp src/mylib.cpp -o bin/Programa 
+make.exe: Leaving directory `c:/Users/Lucca/Documents/GitHub/InformaticaIndustrialUFJF/C++/Aula3/vetoresfunc'
+ 
