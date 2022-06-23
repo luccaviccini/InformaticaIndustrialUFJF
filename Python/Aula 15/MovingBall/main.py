@@ -16,7 +16,7 @@ class MyWidget(BoxLayout):
     
     def command(self):
         if self.ids.bt_mover.text == "Mover":
-            self._ev = Clock.schedule_interval(self.move, 1.0/60.0)
+            self._ev = Clock.schedule_interval(self.move, 1.0/60)
             self.ids.bt_mover.text = "Parar"
         elif self.ids.bt_mover.text == "Parar":
             self._ev.cancel()
