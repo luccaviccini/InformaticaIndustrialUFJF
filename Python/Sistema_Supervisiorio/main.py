@@ -10,7 +10,7 @@ class MainApp(App):
         """
         Método que gera o aplicativo com o widget principal
         """
-        self._widget = MainWidget(scan_time=1000)
+        self._widget = MainWidget(scan_time=1000, server_ip = '127.0.0.1', server_port = 502)
         return self._widget
     
 if __name__ == "__main__":
