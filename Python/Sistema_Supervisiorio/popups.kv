@@ -34,6 +34,8 @@
                 size_hint_y: None
                 height: 40
                 text: "Conectar"
+                on_release:
+                    app.root.stardDataRead(text_ip.text, int(text_porta.text))
             Button:
                 size_hint_y: None
                 height: 40

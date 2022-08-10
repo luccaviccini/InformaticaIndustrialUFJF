@@ -40,7 +40,7 @@ class MainWidget(BoxLayout):
             Window.set_system_cursor("wait")
             self._modbusClient.open()
             Window.set_system_cursor("arrow")
-            if self._modbusClient.is_open():
+            if self._modbusClient.is_open:
                 self._updateThread = Thread(target=self.updater)
                 self._updateThread.start()
                 self.ids.img_con.source = "imgs/conectado.png"
