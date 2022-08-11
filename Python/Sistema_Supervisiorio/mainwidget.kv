@@ -47,6 +47,20 @@
             id: lb_temp
             size_hint:(None, None)
             size: (termometro.size[0]*0.25, termometro.size[1]*0.25)
+            pos_hint: {'x': -0.06, 'y': 0.3}
+            canvas:
+                Color:
+                    rgb: 1,0,0
+                Rectangle:
+                    size: self.size
+                    pos: (self.pos[0]+self.width*1.5,self.pos[1])    
+        Image:
+            id: termometro
+            source: 'imgs/termometro.png'
+            size_hint: 0.17,0.17
+            pos_hint: lb_temp.pos_hint
+
+             
 
         Label:
             id: fornalha

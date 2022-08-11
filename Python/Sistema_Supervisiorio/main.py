@@ -24,6 +24,14 @@ class MainApp(App):
         }
         )
         return self._widget
+
+    def on_stop(self):
+        """
+        Metodo executado quando a aplicacao e fechada
+        """
+        self._widget.stopRefresh()
+
+
     
 if __name__ == "__main__":
     Builder.load_string(open("mainwidget.kv", encoding = "utf-8").read(), rulesonly = True)
