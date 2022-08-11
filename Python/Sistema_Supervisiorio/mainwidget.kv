@@ -60,7 +60,16 @@
             size_hint: 0.17,0.17
             pos_hint: lb_temp.pos_hint
 
-             
+        Button:
+            size_hint:(None, None)
+            size: (0.65*62, 0.65*58)   # a imagem tem 62x58 pixels
+            background_normal: 'imgs/graph_icon.jpg'
+            background_down: 'imgs/graph_icon.jpg'
+            pos_hint: {'x':0.002, 'y': 0.22}
+            on_release:
+                root._graph.open()
+
+
 
         Label:
             id: fornalha
