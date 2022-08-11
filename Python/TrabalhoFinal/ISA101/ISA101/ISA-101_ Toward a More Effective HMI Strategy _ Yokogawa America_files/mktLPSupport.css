@@ -1,0 +1,112 @@
+div.boxSpan {
+  overflow: hidden;
+}
+span.lpContentsItem.richTextSpan {
+  display: block;
+}
+span.lpContentsItem p:first-child{
+  margin-top: 0px;
+}
+
+a.lpImageLink img {
+  border: none;
+}
+form.lpeRegForm {
+  margin: 0px;
+  padding: 0px;
+}
+form.lpeRegForm ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+form.lpeRegForm li {
+  margin: 0px;
+  padding: 1px 10px 3px 10px;
+  list-style: none;
+  clear: both;
+}
+form.lpeRegForm label {
+  padding-right: 20px;
+  float: left;
+  text-align: left;
+}
+form.lpeRegForm li.mktLblRight label {
+  float: none;
+}
+form.lpeRegForm li.mktLblRight input[type='checkbox'] {
+  position: relative;
+  left: -4px;
+}
+
+form.lpeRegForm ul.mktLblCenter label {
+  text-align: right;
+}
+form.lpeRegForm ul.mktLblAbove span.mktInput {
+  clear: both;
+}
+form.lpeRegForm ul.mktLblAbove label {
+  padding-left: 10px;
+}
+form.lpeRegForm ul.mktLblAbove li.mktFormReq label {
+  background:  url(/images/forms/backRequiredGray.gif) no-repeat -5px 0px;
+}
+form.lpeRegForm ul.mktLblAbove li#mktFrmButtons label {
+  display: none;
+}
+form.lpeRegForm li.mktFormReq label {
+  font-weight: bold;
+  background:  url(/images/forms/backRequiredGray.gif) no-repeat right 0px;
+}
+span.mktError {
+  text-align: left;
+  position: relative;
+}
+span.mktError input {
+  background: #ECEFFF;
+}
+span.mktError span.mktFormMsg {
+  display: inline;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  xcolor: #8C8FFF;
+  color: red;
+  font-size: small;
+  width: 200px;
+}
+
+/* New shell icons for the landing page editor menu. Remove these when the landing page editor is full new shell */
+.mkiLpeIcon16 a {
+  background-position: 0 !important;
+}
+
+.mkiLpeFormBlueEdit a {
+  background-image: url(/images/icons16/form_blue_edit.png) !important;
+  float: none !important;
+}
+
+.mkiLpeHandGrab2 a {
+  background-image: url(/images/icons16/hand_grab2.png) !important; 
+  float: none !important;
+}
+.mkiLpeHardDrive a {
+  background-image: url(/images/icons16/hard_drive.png) !important;  
+  float: none !important;
+}
+.mkiLpeDocumentUp a {
+  background-image: url(/images/icons16/document_up.png) !important;  
+  float: none !important;
+}
+
+/* Ideally it is normalized for all the browser
+   but we'll make it targetted for apple devices. Note that this
+   issue is not applicable for android devices which is a mobile
+   safari webkit as well */
+.mktIpad span.mktInput input,
+.mktIpod span.mktInput input,
+.mktIphone span.mktInput input {
+  margin-bottom: 1px; 
+  padding: 1px 0;
+}
+

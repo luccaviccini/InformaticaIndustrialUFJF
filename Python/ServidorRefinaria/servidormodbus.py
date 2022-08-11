@@ -11,7 +11,7 @@ class ServidorMODBUS():
         """
         Construtor
         """
-        self._server =  ModbusServer(host=host_ip, port=port, no_block=True)
+        self._server =  ModbusServer(host=host_ip, port=port, no_block=True) # no block -> cria uma thread para atender aos clientes
     
     def run(self):
         """

@@ -4,7 +4,8 @@ from pyModbusTCP.client import ModbusClient
 from kivy.core.window import Window
 from threading import Thread
 from time import sleep
-
+from datetime import datetime
+import random 
 
 class MainWidget(BoxLayout):
     """
@@ -12,6 +13,7 @@ class MainWidget(BoxLayout):
     """
     _updateThread = None
     _updateWidgets = True
+    _tags = {}
     
     
     def __init__(self, **kwargs):
@@ -25,6 +27,20 @@ class MainWidget(BoxLayout):
         self._modbusPopup = ModbusPopup(self._serverIP,self._serverPort)
         self._scanPopup = ScanPopup(scantime = self._scan_time)
         self._modbusClient = ModbusClient(host = self._serverIP,port = self._serverPort)
+        self._meas = {}
+        self._meas['timestamp'] = None
+        self._meas['values'] = {}
+        for key,value in kwargs.get('modbus_addrs').items():
+            if key == 'fornalha':
+                plot_color =  (1,0,0,1) # RED
+            else:
+                plot_color = (random.random(),random.random(),random.random(),1)
+            
+            self._tags[key] = {'addr':  value, 'color': plot_color} # criando um atributo _tags
+            
+
+
+
     
     def stardDataRead(self, ip, port):
         """
@@ -56,11 +72,35 @@ class MainWidget(BoxLayout):
         inserção dos dados no Banco de dados
         """
         try:
-            while(self._updateWidgets):
+            while self._updateWidgets:
                 # ler os dados MODBUS
+                self.readData() 
+                  
                 # atualizar a interface
+                self.updateGUI()
+                
                 # inserir os dados no banco de dados
                 sleep(self._scan_time/1000)     
         except Exception as e:
             self._modbusClient.close()
-            print("Erro: ", e.args)       
+            print("Erro no Update widgets: ", e.args)       
+    def readData(self):
+        """
+        Método para a leitura dos dados por meio do protocolo MODBUS
+        """
+        
+        self._meas['timestamp']= datetime.now() # retorna exatamente o horário corrente do S.O
+        
+        for key,value in self._tags.items():
+            
+            self._meas['values'][key]  = self._modbusClient.read_holding_registers(value['addr'],1)[0]
+            
+
+    def updateGUI(self):
+        """
+        Método para a atualização  da interface gráfica
+        """
+        #Atualização dos labels da tamperatura
+        for key,value in self._tags.items():
+            print(self.ids[key].text)
+            self.ids[key].text = str(self._meas['values'][key]) + ' °C'  

@@ -1,0 +1,144 @@
+/**
+	* js to prefill marketo forms on webpages
+	* @author Grazitti
+*/
+$.noConflict();
+jQuery(document).ready(function(){ 
+	setTimeout(function(){					
+		hitCount=0;
+		whenReadyRunCount=0;
+		var formfields_names =new Array();
+		var forms_array =new Array();
+		var i=0;
+		var prefill_config = {	url: "https://www.yokogawa.com/api/marketo/prefill/"};
+		
+		/**
+			* function to fetch cookie value
+		*/ 
+		function getCookie(casevalue2) {
+			var name = casevalue2 + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0; i<ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1);
+				if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+			}
+			return "";
+		}
+
+		if(typeof MktoForms2 != "undefined"){
+			MktoForms2.whenReady(function (form){
+				var cookie_mkto_trk = getCookie('_mkto_trk');
+				if(cookie_mkto_trk){			
+				/**
+					* prevent multiple ajax requests in case of multiple forms
+				*/
+					if(hitCount==0){								
+						jQuery('form.mktoForm').each(function(){
+							if(jQuery(this).attr("id")){ 										
+								if(jQuery(this).find("input[name='munchkinId']")){
+									hitCount++;											
+								}
+							}
+							
+						});
+					}
+					whenReadyRunCount++;
+					forms_array.push(form);
+					var formfields = form.vals();
+					if(formfields_names){							
+					   formfields_names=formfields_names+","+Object.keys(formfields);							
+					}else{
+						formfields_names=Object.keys(formfields);
+					}
+					
+					jQuery('form.mktoForm  .mktoFormRow div.mktoPlaceholder').each(function(){
+						mktoPlaceholder=jQuery(this).attr('class');							
+						var valNew = mktoPlaceholder.split(' ');
+						for(var i=0;i<valNew.length;i++){
+							if(i==1){
+								var res =valNew[1].replace('mktoPlaceholder','');
+								if(res)
+								formfields_names=formfields_names+","+res;								
+							}
+						}
+					});
+					
+					if(hitCount==whenReadyRunCount){
+						formfields_names= formfields_names.split(",");
+						/**
+							* Array of form fields except hidden fields
+						*/ 
+						var fields_visible=[];
+						jQuery.each(formfields_names, function(value, elem){		
+							var type = jQuery('[name="'+elem+'"]').attr('type');						
+							if(type == "hidden"){
+								return true;
+							}else{
+								fields_visible.push(elem);							
+							}
+						});
+						formfields_unique= GetUnique(fields_visible);
+						var marketo_form_id = form.getId();
+						var dataprogram = {	
+											data: formfields_unique,
+											filterType:'cookies',
+											filterValue:cookie_mkto_trk,
+											marketo_form_id : marketo_form_id
+										};
+						/**
+							* Ajax request to fetch	details of current lead using cookie
+						*/ 				
+						jQuery.get( prefill_config['url'], dataprogram, function( response ) {						
+							if(response ){
+								var field_havevalues=[];
+								var  result1 = {};
+								results = JSON.parse(response);
+								if(results != null){
+									var finalvaluestofill = {};
+									
+									jQuery.each(formfields_names, function(value, elem){
+										if(elem){													
+											var keys = elem.toLowerCase();
+											if(keys in results)
+											{
+												if(results[keys] && results[keys] != ''){
+													finalvaluestofill[elem] = results[keys];
+													field_havevalues.push(elem);
+												}
+											}
+										} 
+									});
+									/**
+										* Prefill values in the form
+									*/ 
+									for($k=0; $k<forms_array.length; $k++){	
+										forms_array[$k].vals(finalvaluestofill);
+									}
+								}else{
+									console.log("Lead not found in Marketo");
+								}
+							}
+						});
+					}
+				}else{
+					console.log("_mkto_trk cookie not found");
+				}
+			});
+		}
+		/** 
+			* function to get a string containing unique fields
+		*/ 
+		function GetUnique(inputArray){						
+			var outputArray = [];
+			for (var i = 0; i < inputArray.length; i++){
+				if(inputArray[i] && inputArray[i]!='munchkinId' && inputArray[i]!='formid'){
+					if ((jQuery.inArray(inputArray[i], outputArray)) == -1){
+						outputArray.push(inputArray[i]);
+					}
+				}								
+			}								
+			return outputArray.toString();							
+		}
+	}, 3000);
+});
