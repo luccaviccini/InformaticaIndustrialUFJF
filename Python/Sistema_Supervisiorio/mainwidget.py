@@ -1,11 +1,12 @@
 from kivy.uix.boxlayout import BoxLayout
-from popups import ModbusPopup, ScanPopup
+from popups import ModbusPopup, ScanPopup, DataGraphPopup
 from pyModbusTCP.client import ModbusClient
 from kivy.core.window import Window
 from threading import Thread
 from time import sleep
 from datetime import datetime
 import random 
+#from timeseriesgraph import TimeSeriesGraph
 
 
 class MainWidget(BoxLayout):
@@ -15,6 +16,7 @@ class MainWidget(BoxLayout):
     _updateThread = None
     _updateWidgets = True
     _tags = {}
+    _max_points = 20
     
     
     def __init__(self, **kwargs):
@@ -38,7 +40,7 @@ class MainWidget(BoxLayout):
                 plot_color = (random.random(),random.random(),random.random(),1)            
             self._tags[key] = {'addr':  value, 'color': plot_color} # criando um atributo _tags
             
-        #self._graph = DataGraphPopup()
+        self._graph = DataGraphPopup(self._max_points, self._tags['fornalha']['color'])
             
 
 

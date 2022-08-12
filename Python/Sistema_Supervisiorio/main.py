@@ -1,6 +1,7 @@
 from kivy.app import App ## clase base para criação de aplicativos
 from mainwidget import MainWidget
 from kivy.lang import Builder
+from timeseriesgraph import TimeSeriesGraph
 
 class MainApp(App):
     """
