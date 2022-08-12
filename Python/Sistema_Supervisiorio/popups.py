@@ -32,6 +32,4 @@ class ScanPopup(Popup):
         """
         super().__init__(**kwargs) #inicializando o construtor da classe base (Kivy)
         self.ids.txt_st.text = str(scantime)
-        
-class DataGraphPopup(Popup):
-    pass
+

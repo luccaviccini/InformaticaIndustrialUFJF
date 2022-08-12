@@ -1,5 +1,5 @@
 from kivy.uix.boxlayout import BoxLayout
-from popups import ModbusPopup, ScanPopup, DataGraphPopup
+from popups import ModbusPopup, ScanPopup
 from pyModbusTCP.client import ModbusClient
 from kivy.core.window import Window
 from threading import Thread
@@ -38,7 +38,7 @@ class MainWidget(BoxLayout):
                 plot_color = (random.random(),random.random(),random.random(),1)            
             self._tags[key] = {'addr':  value, 'color': plot_color} # criando um atributo _tags
             
-        self._graph = DataGraphPopup()
+        #self._graph = DataGraphPopup()
             
 
 
