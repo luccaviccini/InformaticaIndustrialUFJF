@@ -109,7 +109,10 @@ class MainWidget(BoxLayout):
             print(self.ids[key].text)
             self.ids[key].text = str(self._meas['values'][key]) + ' °C'  
         #Atualização do nivel do termometro
-        self.ids.lb_temp.size = (self.ids.lb_temp.size[0], self._meas['values']['fornalha']/450 *self.ids.termometro.size[1]) 
+        self.ids.lb_temp.size = (self.ids.lb_temp.size[0], self._meas['values']['fornalha']/450 *self.ids.termometro.size[1])
+
+        #Atualização do gráfico
+        self._graph.ids.graph.updateGraph((self._meas['timestamp'],self._meas['values']['fornalha']),0) 
 
     def stopRefresh(self):
         self._updateWidgets = False
